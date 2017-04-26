@@ -42,16 +42,11 @@ public class ProyectofinalProblema444 {
         switch(opc){
             
             case 1:         
-                double precio1=0;
-                String precio2;
         for (int i=0; i<2;i++){     
             for (int j=0;j<2;j++){
-               String dato=JOptionPane.showInputDialog(cosa[j]); 
-               arreglo[i][j]=dato;
+               arreglo[i][j]=JOptionPane.showInputDialog(cosa[j]); 
             }
-            precio1=solicitadouble("Precio: ");
-            precio2=Double.toString(precio1);
-            arreglo[i][2]=precio2;
+            arreglo[i][2]=Double.toString(solicitadouble("Precio: "));
         }               
                 flag=true;
                break;
@@ -72,11 +67,10 @@ public class ProyectofinalProblema444 {
              if (clave.equals(arreglo[i][0])){                 
              arreglo2[i][j]=arreglo[i][j];
              x=1;
-            }
-             
+            }            
             }
            
-         }   System.out.println(x);
+         } 
          
          if (x==0){
          JOptionPane.showMessageDialog(null, "No existe la clave");
